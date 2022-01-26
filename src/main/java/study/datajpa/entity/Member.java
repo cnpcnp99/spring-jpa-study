@@ -1,13 +1,10 @@
 package study.datajpa.entity;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Entity @Getter
+@Entity @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member {
 
