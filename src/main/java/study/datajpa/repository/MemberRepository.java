@@ -10,7 +10,7 @@ import study.datajpa.entity.Member;
 import javax.persistence.QueryHint;
 import java.util.List;
 
-public interface MemberRepository extends JpaRepository<Member, Long> {
+public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom {
 
     @Query(value = "select m from Member m left join m.team t",
             countQuery = "select count(m) from Member m")

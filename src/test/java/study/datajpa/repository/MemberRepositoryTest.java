@@ -32,6 +32,9 @@ class MemberRepositoryTest {
     @PersistenceContext
     EntityManager em;
 
+    @Autowired
+    MemberQueryRepository memberQueryRepository;
+
     @Test
     public void testMember() throws Exception {
         // given
@@ -184,6 +187,16 @@ class MemberRepositoryTest {
         member.setUsername("member2");
 
         em.flush();
+        // then
+    }
+
+    @Test
+    public void callCustom() throws Exception {
+        // given
+        List<Member> result = memberRepository.findMemberCustom();
+
+        // when
+
         // then
     }
 
